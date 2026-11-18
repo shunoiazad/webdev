@@ -1,0 +1,323 @@
+/* Minimal styles on top of Bootstrap. No animations, no shadows, no colors beyond Bootstrap's defaults. */
+
+.sm-card {
+  border: 1px solid #dee2e6;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.laptop-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.laptop-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+.laptop-img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  margin: 1rem auto 0;
+}
+
+.section-pad {
+  padding: 3rem 0;
+}
+
+.hero {
+  padding: 3rem 0;
+}
+
+/* Form option cards */
+fieldset.option-group {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+fieldset.option-group legend {
+  float: none;
+  width: auto;
+  padding: 0;
+}
+
+.option-card {
+  display: block;
+  height: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #adb5bd;
+  cursor: pointer;
+}
+
+.option-card:hover {
+  background: #f1f1f1;
+}
+
+.option-card:focus-within {
+  outline: 2px solid #000;
+}
+
+.option-card.is-selected {
+  border: 2px solid #000;
+  background: #f1f1f1;
+}
+
+.option-title {
+  display: block;
+  font-weight: 600;
+}
+
+.option-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* Laptop details pop-up */
+.sm-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1060;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.sm-modal {
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.spec-row dd {
+  margin: 0;
+  text-align: right;
+}
+
+.reason-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+/* FAQ accordion */
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: 0;
+  text-align: left;
+  font-weight: 600;
+}
+
+.faq-question:hover {
+  background: #f1f1f1;
+}
+
+.faq-item + .faq-item {
+  border-top: 1px solid #dee2e6;
+}
+
+.faq-answer {
+  padding: 0 1.25rem 1.25rem;
+}
+
+.faq-answer[hidden] {
+  display: none;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin: 0 auto 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9ecef;
+  font-weight: 600;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 2000;
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Simple hover for links and buttons */
+a:hover {
+  text-decoration: underline;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: #212529;
+  border-color: #212529;
+}
+
+.btn-primary:hover {
+  background: #495057;
+  border-color: #495057;
+}
+
+.btn-outline-primary {
+  color: #212529;
+  border-color: #212529;
+}
+
+.btn-outline-primary:hover {
+  background: #212529;
+  color: #fff;
+}
+
+.text-primary {
+  color: #212529 !important;
+}
+
+.text-bg-primary {
+  background: #212529 !important;
+}
+
+/* Emoji icons on cards */
+.feature-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* Home banner: laptop photo on the right that runs off the edge of the screen */
+.hero {
+  overflow: hidden;
+}
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Spacing between headings and text */
+.hero h1 {
+  margin-bottom: 1rem;
+}
+
+.hero .lead {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.sm-card h3,
+.sm-card h2 {
+  margin-bottom: 0.75rem;
+}
+
+.match-box,
+.alert {
+  padding: 1rem 1.25rem;
+}
+
+/* Simple hovers (no animation) */
+.sm-card:not(.form-card):not(.sm-modal):hover {
+  border-color: #212529;
+  background: #f8f9fa;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+.faq-question:hover,
+.option-card:hover {
+  background: #f1f1f1;
+}
+
+/* Front page: remove the big empty gap around the banner */
+.hero {
+  padding: 3rem 0 2rem;
+}
+
+.hero + .section-pad {
+  padding-top: 1.5rem;
+}
+
+.hero-photo {
+  max-height: 340px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Cards that hold a heading + paragraphs: keep the heading close to its text */
+.sm-card .section-heading {
+  margin-bottom: 1rem;
+}
+
+.hero .text-primary {
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive tweaks (the Bootstrap grid handles the main layout) */
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 2rem 0 1rem;
+  }
+
+  .hero-compact h1 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-pad {
+    padding: 2rem 0;
+  }
+
+  .sm-card {
+    padding: 1.1rem;
+  }
+
+  .laptop-body {
+    padding: 1.1rem;
+  }
+
+  .spec-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .spec-row dd {
+    text-align: left;
+  }
+}
